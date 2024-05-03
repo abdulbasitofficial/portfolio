@@ -2495,7 +2495,7 @@ portfolio
 /* line 972, ../scss/_content.scss */
 .art-recomendation-popup {
   background-color: transparent;
-  max-width: 50%; }
+   }
 
 /* ------------------------------
 
@@ -2509,7 +2509,7 @@ content (after 1600px)
     font-size: 42px; }
   /* line 991, ../scss/_content.scss */
   .art-banner .art-banner-overlay .art-banner-photo {
-    width: 360px; } }
+     } }
 /* ------------------------------
 
 content (after 1400px)
@@ -2526,7 +2526,7 @@ content (after 1400px)
     font-size: 36px; }
   /* line 1016, ../scss/_content.scss */
   .art-banner .art-banner-overlay .art-banner-photo {
-    width: 320px; } }
+    } }
 /* ------------------------------
 
 content (after 1200px)
