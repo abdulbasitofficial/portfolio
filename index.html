@@ -297,21 +297,66 @@
                         <!-- main title -->
                         <div class="art-banner-title">
                           <!-- title -->
-                          <h1 class="mb-15">Software Engineer <br>.Net</h1>
+                          <h3 class="mb-15">Software Engineer</h3>
                           <!-- suptitle -->
                           <div class="art-lg-text art-code mb-25">&lt;<i>code</i>&gt; Software Engineer at <span
                               class="txt-rotate" data-period="2000"
                               data-rotate='["WISEMAN INNOVATIONS."]'></span>&lt;/<i>code</i>&gt;
                           </div>
-                          <div class="art-buttons-frame">
+                          <div class="art-buttons-frame" style="text-align: justify;">
                             <!-- button -->
+                            <p style="color: white;">As a seasoned Full Stack Developer, I thrive in dynamic
+                              environments where innovation
+                              meets real-world problem-solving. At Wiseman Innovations, I leverage a robust tech stack
+                              to design, develop, and optimize sophisticated web applications, ensuring seamless
+                              experiences and high-performance solutions. My expertise spans both backend and frontend
+                              technologies, with a proven track record of delivering scalable and secure solutions
+                              that drive business success.</p>
+                            <div class="art-code"><i>Core Technical Competencies:</i></div>
+
+                            <ul style="color: white;">
+                              <li><strong>Backend Development:</i> Proficient in ASP.NET MVC & Core, SQL Server,
+                                  and MySQL, leveraging technologies like LINQ and Dapper to build efficient,
+                                  data-driven solutions.</li>
+                              <li><strong>Frontend Development:</strong> Expertise in modern web technologies,
+                                including JavaScript, PHP, Angular, and CSS, to create intuitive, responsive user
+                                interfaces.</li>
+                              <li><strong>API Development & Integration:</strong> Experienced in designing and
+                                developing RESTful APIs, ensuring high availability and scalability.</li>
+                              <li><strong>Cloud & DevOps:</strong> Familiar with Azure, utilizing cloud platforms to
+                                optimize application performance, security, and deployment processes.</li>
+                              <li><strong>Version Control & Collaboration:</strong> Strong command of GitHub and TFS
+                                for efficient version control, code collaboration, and team coordination.</li>
+                              <li><strong>UI/UX & Graphic Design:</strong> Passionate about enhancing user experience,
+                                blending my development expertise with a solid foundation in graphic design and UI/UX
+                                principles.</li>
+                            </ul>
+                            <div class="art-code"><i>Professional Expertise & Impact:</i></div>
+                            <ul style="color: white;">
+                              <li><strong>End-to-End Solution Development:</strong> Adept at handling the full
+                                software development lifecycle—from initial requirements gathering and system design
+                                to deployment and post-launch support.</li>
+                              <li><strong>Performance Optimization:</strong> Focused on delivering high-performing
+                                systems that are both efficient and maintainable, reducing load times and increasing
+                                overall application speed.</li>
+                              <li><strong>Collaboration & Innovation:</strong> Known for effective collaboration with
+                                cross-functional teams, delivering solutions that meet both technical and business
+                                requirements, and driving the adoption of best practices across teams.</li>
+                              <li><strong>Scalable Solutions:</strong> Experience building and maintaining
+                                applications that scale with business growth, ensuring that systems remain performant
+                                and secure under increasing loads.</li>
+                            </ul>
+                            <p style="color: white;">I am passionate about using my diverse skill set to build
+                              innovative solutions that
+                              solve complex problems and deliver measurable results. My goal is always to build
+                              applications that are not only functional but also provide outstanding user experiences
+                              while maintaining the highest standards of code quality and security.</p>
                             <a href="contact.html" class="art-btn art-btn-md"><span>Contact
                                 now</span></a>
                           </div>
                         </div>
                         <!-- main title end -->
                         <!-- photo -->
-                        <img src="img/face-2.png" class="art-banner-photo" alt="Your Name">
                       </div>
                       <!-- banner overlay end -->
                     </div>
@@ -339,7 +384,7 @@
                       <!-- counter -->
                       <div class="art-counter-box">
                         <!-- counter number -->
-                        <span class="art-counter">5</span><span class="art-counter-plus">+</span>
+                        <span class="art-counter" id="YearsExperience">6</span><span class="art-counter-plus">+</span>
                       </div>
                       <!-- counter end -->
                       <!-- title -->
@@ -420,8 +465,8 @@
 
                   </div>
                   <!-- col end -->
-                   <!-- col -->
-                   <div class="col-lg-4 col-md-6">
+                  <!-- col -->
+                  <div class="col-lg-4 col-md-6">
 
                     <!-- service -->
                     <div class="art-a art-service-icon-box">
@@ -557,7 +602,7 @@
               </div>
               <!-- container end -->
 
-             
+
 
               <!-- container -->
               <div class="container-fluid">
@@ -693,7 +738,37 @@
 
   </div>
   <!-- app end -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <script>
+    // Function to calculate the age in years and months
+    function getAge(dateString) {
+      var birthDate = new Date(dateString); // Create date object from the input date
+      var today = new Date(); // Get the current date
+      var years = today.getFullYear() - birthDate.getFullYear(); // Calculate the difference in years
+
+      // Calculate the difference in months
+      var months = today.getMonth() - birthDate.getMonth();
+
+      // Adjust if the month has not passed yet this year
+      if (months < 0) {
+        years--;
+        months += 12; // Add 12 months to the month difference if negative
+      }
+
+      // Adjust the number of months if the birthday has not occurred yet this year
+      if (today.getDate() < birthDate.getDate()) {
+        months--;
+      }
+
+      return years + "." + months;
+    }
+
+    $(document).ready(function () {
+      // Update the element with the ID "YearsExperience" with the calculated age
+      $("#YearsExperience").text(getAge('2020/06/01'));
+    });
+  </script>
   <!-- jquery js -->
   <script src="js/plugins/jquery.min.js"></script>
   <!-- anime js -->
