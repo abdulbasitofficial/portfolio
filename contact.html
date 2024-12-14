@@ -579,16 +579,22 @@
                     </span> Abdul Basit
                   </div>
                   <div>
-                    <!-- social link -->
-                    <a href="https://www.linkedin.com/in/abdulbasitmangral" target="_blank"><i
-                        class="fab fa-linkedin-in"></i></a>
-                    <!-- social link -->
-                    <a href="https://www.facebook.com/weabdulbasit" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <!-- social link -->
-                    <a href="https://www.instagram.com/weabdulbasit" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                    <!-- social link -->
-                    <a href="https://x.com/weabdulbasit" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <!-- LinkedIn link -->
+                    <a href="https://www.linkedin.com/in/abdulbasitmangral" onclick="openInNewWindowAndReload(event)">
+                      <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <!-- Facebook link -->
+                    <a href="https://www.facebook.com/weabdulbasit" onclick="openInNewWindowAndReload(event)">
+                      <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <!-- Instagram link -->
+                    <a href="https://www.instagram.com/weabdulbasit" onclick="openInNewWindowAndReload(event)">
+                      <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <!-- Twitter link -->
+                    <a href="https://x.com/weabdulbasit" onclick="openInNewWindowAndReload(event)">
+                      <i class="fab fa-twitter"></i> Twitter
+                    </a>
                   </div>
                 </footer>
                 <!-- footer end -->
@@ -679,7 +685,13 @@
 
   </div>
   <!-- app end -->
-
+  <script>
+    function openInNewWindowAndReload(event) {
+      event.preventDefault();  // Prevent the default link behavior (navigate in current window)
+      window.open(event.target.href, '_blank');  // Open the link in a new window or tab
+      location.reload();  // Reload the current window
+    }
+  </script>
   <!-- jquery js -->
   <script src="js/plugins/jquery.min.js"></script>
   <!-- anime js -->

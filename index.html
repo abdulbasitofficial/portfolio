@@ -817,23 +817,24 @@
                   </div>
                   <div>
                     <!-- LinkedIn link -->
-                    <a href="https://www.linkedin.com/in/abdulbasitmangral" onclick="window.open(this.href, '_blank'); return false;">
-                      <i class="fab fa-linkedin-in"></i>
+                    <a href="https://www.linkedin.com/in/abdulbasitmangral" onclick="openInNewWindowAndReload(event)">
+                      <i class="fab fa-linkedin-in"></i> LinkedIn
                     </a>
                     <!-- Facebook link -->
-                    <a href="https://www.facebook.com/weabdulbasit" onclick="window.open(this.href, '_blank'); return false;">
-                      <i class="fab fa-facebook"></i>
+                    <a href="https://www.facebook.com/weabdulbasit" onclick="openInNewWindowAndReload(event)">
+                      <i class="fab fa-facebook"></i> Facebook
                     </a>
                     <!-- Instagram link -->
-                    <a href="https://www.instagram.com/weabdulbasit" onclick="window.open(this.href, '_blank'); return false;">
-                      <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/weabdulbasit" onclick="openInNewWindowAndReload(event)">
+                      <i class="fab fa-instagram"></i> Instagram
                     </a>
-                    <!-- X (Twitter) link -->
-                    <a href="https://x.com/weabdulbasit" onclick="window.open(this.href, '_blank'); return false;">
-                      <i class="fab fa-twitter"></i>
+                    <!-- Twitter link -->
+                    <a href="https://x.com/weabdulbasit" onclick="openInNewWindowAndReload(event)">
+                      <i class="fab fa-twitter"></i> Twitter
                     </a>
                   </div>
-                  
+
+
                 </footer>
                 <!-- footer end -->
 
@@ -924,7 +925,13 @@
   </div>
   <!-- app end -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+  <script>
+    function openInNewWindowAndReload(event) {
+      event.preventDefault();  // Prevent the default link behavior (navigate in current window)
+      window.open(event.target.href, '_blank');  // Open the link in a new window or tab
+      location.reload();  // Reload the current window
+    }
+  </script>
   <script>
     // Function to calculate the age in years and months
     function getAge(dateString) {
